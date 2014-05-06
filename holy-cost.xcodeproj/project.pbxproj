@@ -22,6 +22,9 @@
 		30192D361918AB750056375B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30192D1A1918AB750056375B /* CoreData.framework */; };
 		30192D3E1918AB750056375B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30192D3C1918AB750056375B /* InfoPlist.strings */; };
 		30192D401918AB750056375B /* holy_costTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D3F1918AB750056375B /* holy_costTests.m */; };
+		30192D4A1918AC6D0056375B /* Holyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30192D491918AC6D0056375B /* Holyboard.storyboard */; };
+		30192D4E1918ACC10056375B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D4D1918ACC10056375B /* MainViewController.m */; };
+		30192D551918AFEC0056375B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D541918AFEC0056375B /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		30192D3B1918AB750056375B /* holy-costTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "holy-costTests-Info.plist"; sourceTree = "<group>"; };
 		30192D3D1918AB750056375B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30192D3F1918AB750056375B /* holy_costTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = holy_costTests.m; sourceTree = "<group>"; };
+		30192D491918AC6D0056375B /* Holyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Holyboard.storyboard; sourceTree = "<group>"; };
+		30192D4C1918ACC10056375B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		30192D4D1918ACC10056375B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		30192D531918AFEC0056375B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		30192D541918AFEC0056375B /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		30192D081918AB750056375B = {
 			isa = PBXGroup;
 			children = (
+				30192D491918AC6D0056375B /* Holyboard.storyboard */,
 				30192D1C1918AB750056375B /* holy-cost */,
 				30192D391918AB750056375B /* holy-costTests */,
 				30192D131918AB750056375B /* Frameworks */,
@@ -115,6 +124,8 @@
 		30192D1C1918AB750056375B /* holy-cost */ = {
 			isa = PBXGroup;
 			children = (
+				30192D4F1918AF990056375B /* Models */,
+				30192D4B1918AC990056375B /* Controllers */,
 				30192D251918AB750056375B /* AppDelegate.h */,
 				30192D261918AB750056375B /* AppDelegate.m */,
 				30192D2B1918AB750056375B /* Images.xcassets */,
@@ -151,6 +162,24 @@
 				30192D3C1918AB750056375B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30192D4B1918AC990056375B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30192D4C1918ACC10056375B /* MainViewController.h */,
+				30192D4D1918ACC10056375B /* MainViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30192D4F1918AF990056375B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30192D531918AFEC0056375B /* Product.h */,
+				30192D541918AFEC0056375B /* Product.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30192D4A1918AC6D0056375B /* Holyboard.storyboard in Resources */,
 				30192D211918AB750056375B /* InfoPlist.strings in Resources */,
 				30192D2C1918AB750056375B /* Images.xcassets in Resources */,
 			);
@@ -252,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30192D271918AB750056375B /* AppDelegate.m in Sources */,
+				30192D551918AFEC0056375B /* Product.m in Sources */,
 				30192D2A1918AB750056375B /* holy_cost.xcdatamodeld in Sources */,
 				30192D231918AB750056375B /* main.m in Sources */,
+				30192D4E1918ACC10056375B /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +484,7 @@
 				30192D451918AB750056375B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30192D461918AB750056375B /* Build configuration list for PBXNativeTarget "holy-costTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +493,7 @@
 				30192D481918AB750056375B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

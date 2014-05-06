@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3029E4E31918A11B0068F415 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E21918A11B0068F415 /* Foundation.framework */; };
+		3029E4E51918A11B0068F415 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E41918A11B0068F415 /* CoreGraphics.framework */; };
+		3029E4E71918A11B0068F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E61918A11B0068F415 /* UIKit.framework */; };
+		3029E4E91918A11B0068F415 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E81918A11B0068F415 /* CoreData.framework */; };
+		3029E4EF1918A11B0068F415 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3029E4ED1918A11B0068F415 /* InfoPlist.strings */; };
+		3029E4F11918A11B0068F415 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3029E4F01918A11B0068F415 /* main.m */; };
+		3029E4F51918A11B0068F415 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3029E4F41918A11B0068F415 /* AppDelegate.m */; };
+		3029E4F81918A11B0068F415 /* holy_cost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3029E4F61918A11B0068F415 /* holy_cost.xcdatamodeld */; };
+		3029E4FA1918A11B0068F415 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3029E4F91918A11B0068F415 /* Images.xcassets */; };
+		3029E5011918A11B0068F415 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E5001918A11B0068F415 /* XCTest.framework */; };
+		3029E5021918A11B0068F415 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E21918A11B0068F415 /* Foundation.framework */; };
+		3029E5031918A11B0068F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E61918A11B0068F415 /* UIKit.framework */; };
+		3029E5041918A11B0068F415 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E4E81918A11B0068F415 /* CoreData.framework */; };
+		3029E50C1918A11B0068F415 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3029E50A1918A11B0068F415 /* InfoPlist.strings */; };
+		3029E50E1918A11B0068F415 /* holy_costTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3029E50D1918A11B0068F415 /* holy_costTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3029E5051918A11B0068F415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3029E4D71918A11B0068F415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3029E4DE1918A11B0068F415;
+			remoteInfo = "holy-cost";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3029E4DF1918A11B0068F415 /* holy-cost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "holy-cost.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3029E4E21918A11B0068F415 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3029E4E41918A11B0068F415 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3029E4E61918A11B0068F415 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3029E4E81918A11B0068F415 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3029E4EC1918A11B0068F415 /* holy-cost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "holy-cost-Info.plist"; sourceTree = "<group>"; };
+		3029E4EE1918A11B0068F415 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3029E4F01918A11B0068F415 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3029E4F21918A11B0068F415 /* holy-cost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "holy-cost-Prefix.pch"; sourceTree = "<group>"; };
+		3029E4F31918A11B0068F415 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3029E4F41918A11B0068F415 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3029E4F71918A11B0068F415 /* holy_cost.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = holy_cost.xcdatamodel; sourceTree = "<group>"; };
+		3029E4F91918A11B0068F415 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3029E4FF1918A11B0068F415 /* holy-costTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "holy-costTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3029E5001918A11B0068F415 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3029E5091918A11B0068F415 /* holy-costTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "holy-costTests-Info.plist"; sourceTree = "<group>"; };
+		3029E50B1918A11B0068F415 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3029E50D1918A11B0068F415 /* holy_costTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = holy_costTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3029E4DC1918A11B0068F415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3029E4E51918A11B0068F415 /* CoreGraphics.framework in Frameworks */,
+				3029E4E91918A11B0068F415 /* CoreData.framework in Frameworks */,
+				3029E4E71918A11B0068F415 /* UIKit.framework in Frameworks */,
+				3029E4E31918A11B0068F415 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3029E4FC1918A11B0068F415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3029E5011918A11B0068F415 /* XCTest.framework in Frameworks */,
+				3029E5041918A11B0068F415 /* CoreData.framework in Frameworks */,
+				3029E5031918A11B0068F415 /* UIKit.framework in Frameworks */,
+				3029E5021918A11B0068F415 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3029E4D61918A11B0068F415 = {
+			isa = PBXGroup;
+			children = (
+				3029E4EA1918A11B0068F415 /* holy-cost */,
+				3029E5071918A11B0068F415 /* holy-costTests */,
+				3029E4E11918A11B0068F415 /* Frameworks */,
+				3029E4E01918A11B0068F415 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3029E4E01918A11B0068F415 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3029E4DF1918A11B0068F415 /* holy-cost.app */,
+				3029E4FF1918A11B0068F415 /* holy-costTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3029E4E11918A11B0068F415 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3029E4E21918A11B0068F415 /* Foundation.framework */,
+				3029E4E41918A11B0068F415 /* CoreGraphics.framework */,
+				3029E4E61918A11B0068F415 /* UIKit.framework */,
+				3029E4E81918A11B0068F415 /* CoreData.framework */,
+				3029E5001918A11B0068F415 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3029E4EA1918A11B0068F415 /* holy-cost */ = {
+			isa = PBXGroup;
+			children = (
+				3029E4F31918A11B0068F415 /* AppDelegate.h */,
+				3029E4F41918A11B0068F415 /* AppDelegate.m */,
+				3029E4F91918A11B0068F415 /* Images.xcassets */,
+				3029E4F61918A11B0068F415 /* holy_cost.xcdatamodeld */,
+				3029E4EB1918A11B0068F415 /* Supporting Files */,
+			);
+			path = "holy-cost";
+			sourceTree = "<group>";
+		};
+		3029E4EB1918A11B0068F415 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3029E4EC1918A11B0068F415 /* holy-cost-Info.plist */,
+				3029E4ED1918A11B0068F415 /* InfoPlist.strings */,
+				3029E4F01918A11B0068F415 /* main.m */,
+				3029E4F21918A11B0068F415 /* holy-cost-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3029E5071918A11B0068F415 /* holy-costTests */ = {
+			isa = PBXGroup;
+			children = (
+				3029E50D1918A11B0068F415 /* holy_costTests.m */,
+				3029E5081918A11B0068F415 /* Supporting Files */,
+			);
+			path = "holy-costTests";
+			sourceTree = "<group>";
+		};
+		3029E5081918A11B0068F415 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3029E5091918A11B0068F415 /* holy-costTests-Info.plist */,
+				3029E50A1918A11B0068F415 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3029E4DE1918A11B0068F415 /* holy-cost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3029E5111918A11B0068F415 /* Build configuration list for PBXNativeTarget "holy-cost" */;
+			buildPhases = (
+				3029E4DB1918A11B0068F415 /* Sources */,
+				3029E4DC1918A11B0068F415 /* Frameworks */,
+				3029E4DD1918A11B0068F415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "holy-cost";
+			productName = "holy-cost";
+			productReference = 3029E4DF1918A11B0068F415 /* holy-cost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3029E4FE1918A11B0068F415 /* holy-costTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3029E5141918A11B0068F415 /* Build configuration list for PBXNativeTarget "holy-costTests" */;
+			buildPhases = (
+				3029E4FB1918A11B0068F415 /* Sources */,
+				3029E4FC1918A11B0068F415 /* Frameworks */,
+				3029E4FD1918A11B0068F415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3029E5061918A11B0068F415 /* PBXTargetDependency */,
+			);
+			name = "holy-costTests";
+			productName = "holy-costTests";
+			productReference = 3029E4FF1918A11B0068F415 /* holy-costTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3029E4D71918A11B0068F415 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Roman Kostyuk";
+				TargetAttributes = {
+					3029E4FE1918A11B0068F415 = {
+						TestTargetID = 3029E4DE1918A11B0068F415;
+					};
+				};
+			};
+			buildConfigurationList = 3029E4DA1918A11B0068F415 /* Build configuration list for PBXProject "holy-cost" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3029E4D61918A11B0068F415;
+			productRefGroup = 3029E4E01918A11B0068F415 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3029E4DE1918A11B0068F415 /* holy-cost */,
+				3029E4FE1918A11B0068F415 /* holy-costTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3029E4DD1918A11B0068F415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3029E4EF1918A11B0068F415 /* InfoPlist.strings in Resources */,
+				3029E4FA1918A11B0068F415 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3029E4FD1918A11B0068F415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3029E50C1918A11B0068F415 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3029E4DB1918A11B0068F415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3029E4F51918A11B0068F415 /* AppDelegate.m in Sources */,
+				3029E4F81918A11B0068F415 /* holy_cost.xcdatamodeld in Sources */,
+				3029E4F11918A11B0068F415 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3029E4FB1918A11B0068F415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3029E50E1918A11B0068F415 /* holy_costTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3029E5061918A11B0068F415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3029E4DE1918A11B0068F415 /* holy-cost */;
+			targetProxy = 3029E5051918A11B0068F415 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3029E4ED1918A11B0068F415 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3029E4EE1918A11B0068F415 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3029E50A1918A11B0068F415 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3029E50B1918A11B0068F415 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3029E50F1918A11B0068F415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3029E5101918A11B0068F415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3029E5121918A11B0068F415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "holy-cost/holy-cost-Prefix.pch";
+				INFOPLIST_FILE = "holy-cost/holy-cost-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3029E5131918A11B0068F415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "holy-cost/holy-cost-Prefix.pch";
+				INFOPLIST_FILE = "holy-cost/holy-cost-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3029E5151918A11B0068F415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/holy-cost.app/holy-cost";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "holy-cost/holy-cost-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "holy-costTests/holy-costTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3029E5161918A11B0068F415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/holy-cost.app/holy-cost";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "holy-cost/holy-cost-Prefix.pch";
+				INFOPLIST_FILE = "holy-costTests/holy-costTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3029E4DA1918A11B0068F415 /* Build configuration list for PBXProject "holy-cost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3029E50F1918A11B0068F415 /* Debug */,
+				3029E5101918A11B0068F415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3029E5111918A11B0068F415 /* Build configuration list for PBXNativeTarget "holy-cost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3029E5121918A11B0068F415 /* Debug */,
+				3029E5131918A11B0068F415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3029E5141918A11B0068F415 /* Build configuration list for PBXNativeTarget "holy-costTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3029E5151918A11B0068F415 /* Debug */,
+				3029E5161918A11B0068F415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3029E4F61918A11B0068F415 /* holy_cost.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3029E4F71918A11B0068F415 /* holy_cost.xcdatamodel */,
+			);
+			currentVersion = 3029E4F71918A11B0068F415 /* holy_cost.xcdatamodel */;
+			path = holy_cost.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3029E4D71918A11B0068F415 /* Project object */;
+}

@@ -12,6 +12,6 @@
 @implementation Product
 
 @dynamic name;
-@dynamic price;
+@dynamic purchases;
 
 @end

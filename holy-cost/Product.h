@@ -13,6 +13,6 @@
 @interface Product : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * price;
+@property (nonatomic, retain) NSSet    *purchases;
 
 @end

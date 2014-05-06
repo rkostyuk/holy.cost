@@ -1,21 +1,27 @@
 //
-//  MainViewController.m
+//  TabBarController.m
 //  holy-cost
 //
 //  Created by Roman Kostyuk on 5/6/14.
 //  Copyright (c) 2014 Roman Kostyuk. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "TabBarController.h"
 
-@interface MainViewController ()
-
-@property (nonatomic, retain) IBOutlet UITextField *productNameInput;
-@property (nonatomic, retain) IBOutlet UITextField *productPriceInput;
+@interface TabBarController ()
 
 @end
 
-@implementation MainViewController
+@implementation TabBarController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {

@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  TabBarController.h
 //  holy-cost
 //
 //  Created by Roman Kostyuk on 5/6/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface TabBarController : UITabBarController
 
 @end

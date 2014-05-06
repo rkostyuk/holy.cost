@@ -23,8 +23,11 @@
 		30192D3E1918AB750056375B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30192D3C1918AB750056375B /* InfoPlist.strings */; };
 		30192D401918AB750056375B /* holy_costTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D3F1918AB750056375B /* holy_costTests.m */; };
 		30192D4A1918AC6D0056375B /* Holyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30192D491918AC6D0056375B /* Holyboard.storyboard */; };
-		30192D4E1918ACC10056375B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D4D1918ACC10056375B /* MainViewController.m */; };
 		30192D551918AFEC0056375B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D541918AFEC0056375B /* Product.m */; };
+		30192D581918B3A80056375B /* AddProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D571918B3A80056375B /* AddProductViewController.m */; };
+		30192D5B1918B59B0056375B /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D5A1918B59B0056375B /* TabBarController.m */; };
+		30192D5E1918D20B0056375B /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D5D1918D20B0056375B /* Purchase.m */; };
+		30192D621918E45F0056375B /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D611918E45F0056375B /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +60,16 @@
 		30192D3D1918AB750056375B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30192D3F1918AB750056375B /* holy_costTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = holy_costTests.m; sourceTree = "<group>"; };
 		30192D491918AC6D0056375B /* Holyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Holyboard.storyboard; sourceTree = "<group>"; };
-		30192D4C1918ACC10056375B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		30192D4D1918ACC10056375B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		30192D531918AFEC0056375B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		30192D541918AFEC0056375B /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		30192D561918B3A80056375B /* AddProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductViewController.h; sourceTree = "<group>"; };
+		30192D571918B3A80056375B /* AddProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductViewController.m; sourceTree = "<group>"; };
+		30192D591918B59B0056375B /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		30192D5A1918B59B0056375B /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		30192D5C1918D20B0056375B /* Purchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Purchase.h; sourceTree = "<group>"; };
+		30192D5D1918D20B0056375B /* Purchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Purchase.m; sourceTree = "<group>"; };
+		30192D601918E45F0056375B /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		30192D611918E45F0056375B /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +133,12 @@
 		30192D1C1918AB750056375B /* holy-cost */ = {
 			isa = PBXGroup;
 			children = (
+				30192D5F1918E2000056375B /* Database */,
 				30192D4F1918AF990056375B /* Models */,
 				30192D4B1918AC990056375B /* Controllers */,
 				30192D251918AB750056375B /* AppDelegate.h */,
 				30192D261918AB750056375B /* AppDelegate.m */,
 				30192D2B1918AB750056375B /* Images.xcassets */,
-				30192D281918AB750056375B /* holy_cost.xcdatamodeld */,
 				30192D1D1918AB750056375B /* Supporting Files */,
 			);
 			path = "holy-cost";
@@ -167,8 +176,12 @@
 		30192D4B1918AC990056375B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				30192D4C1918ACC10056375B /* MainViewController.h */,
-				30192D4D1918ACC10056375B /* MainViewController.m */,
+				30192D561918B3A80056375B /* AddProductViewController.h */,
+				30192D571918B3A80056375B /* AddProductViewController.m */,
+				30192D591918B59B0056375B /* TabBarController.h */,
+				30192D5A1918B59B0056375B /* TabBarController.m */,
+				30192D601918E45F0056375B /* ListViewController.h */,
+				30192D611918E45F0056375B /* ListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -178,8 +191,18 @@
 			children = (
 				30192D531918AFEC0056375B /* Product.h */,
 				30192D541918AFEC0056375B /* Product.m */,
+				30192D5C1918D20B0056375B /* Purchase.h */,
+				30192D5D1918D20B0056375B /* Purchase.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		30192D5F1918E2000056375B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				30192D281918AB750056375B /* holy_cost.xcdatamodeld */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,11 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30192D5E1918D20B0056375B /* Purchase.m in Sources */,
+				30192D5B1918B59B0056375B /* TabBarController.m in Sources */,
+				30192D621918E45F0056375B /* ListViewController.m in Sources */,
 				30192D271918AB750056375B /* AppDelegate.m in Sources */,
 				30192D551918AFEC0056375B /* Product.m in Sources */,
 				30192D2A1918AB750056375B /* holy_cost.xcdatamodeld in Sources */,
 				30192D231918AB750056375B /* main.m in Sources */,
-				30192D4E1918ACC10056375B /* MainViewController.m in Sources */,
+				30192D581918B3A80056375B /* AddProductViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

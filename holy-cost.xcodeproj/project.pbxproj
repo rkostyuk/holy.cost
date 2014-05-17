@@ -28,6 +28,8 @@
 		30192D5B1918B59B0056375B /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D5A1918B59B0056375B /* TabBarController.m */; };
 		30192D5E1918D20B0056375B /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D5D1918D20B0056375B /* Purchase.m */; };
 		30192D621918E45F0056375B /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30192D611918E45F0056375B /* ListViewController.m */; };
+		30852A051925D2760029A255 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30852A041925D2760029A255 /* ProductTableViewController.m */; };
+		309D03D919274798006B2DA1 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309D03D819274798006B2DA1 /* ProductViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		30192D5D1918D20B0056375B /* Purchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Purchase.m; sourceTree = "<group>"; };
 		30192D601918E45F0056375B /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		30192D611918E45F0056375B /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		30852A031925D2760029A255 /* ProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
+		30852A041925D2760029A255 /* ProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
+		309D03D719274798006B2DA1 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		309D03D819274798006B2DA1 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,10 @@
 				30192D5A1918B59B0056375B /* TabBarController.m */,
 				30192D601918E45F0056375B /* ListViewController.h */,
 				30192D611918E45F0056375B /* ListViewController.m */,
+				30852A031925D2760029A255 /* ProductTableViewController.h */,
+				30852A041925D2760029A255 /* ProductTableViewController.m */,
+				309D03D719274798006B2DA1 /* ProductViewController.h */,
+				309D03D819274798006B2DA1 /* ProductViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +316,8 @@
 			files = (
 				30192D5E1918D20B0056375B /* Purchase.m in Sources */,
 				30192D5B1918B59B0056375B /* TabBarController.m in Sources */,
+				309D03D919274798006B2DA1 /* ProductViewController.m in Sources */,
+				30852A051925D2760029A255 /* ProductTableViewController.m in Sources */,
 				30192D621918E45F0056375B /* ListViewController.m in Sources */,
 				30192D271918AB750056375B /* AppDelegate.m in Sources */,
 				30192D551918AFEC0056375B /* Product.m in Sources */,

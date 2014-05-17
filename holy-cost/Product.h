@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-
 @interface Product : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSSet    *purchases;
+
+@end
+
+@interface Product (CoreDataGeneratedAccessors)
+
++ (void)createProductWithName:(NSString *)productName inContext:(NSManagedObjectContext *)context;
 
 @end

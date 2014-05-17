@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TabBarController.h"
 #import "AddProductViewController.h"
+#import "ProductTableViewController.h"
 #import "ListViewController.h"
 #import "Product.h"
 #import "Purchase.h"
@@ -16,7 +17,7 @@
 @interface AddProductViewController ()
 
 @property (nonatomic, retain) IBOutlet UITextField *productNameInput;
-@property (nonatomic, retain) IBOutlet UITextField *productPriceInput;
+//@property (nonatomic, retain) IBOutlet UITextField *productPriceInput;
 @property (nonatomic, retain) IBOutlet UIButton    *addProduct;
 
 @end
@@ -26,8 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view.
+    self.productNameInput.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,64 +36,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-# pragma mark - IBActions
+#pragma mark - IBActions
 
 - (IBAction)addProduct:(id)sender
 {
-    
-//    Product *product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
-//    [product setValue:self.productNameInput.text forKey:@"name"];
-    
-    
-    Purchase *purchase = [NSEntityDescription insertNewObjectForEntityForName:@"Purchase" inManagedObjectContext:self.managedObjectContext];
-    [purchase setValue:[self numberFormatter:self.productPriceInput.text] forKey:@"price"];
-    [purchase setValue:[NSDate date] forKey:@"created_at"];
-    
-    NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-    NSLog(@"%@", purchase);
-
-    [self.productNameInput resignFirstResponder];
-    [self.productPriceInput resignFirstResponder];
-
+    [Product createProductWithName:self.productNameInput.text inContext:self.managedObjectContext];
+//    [Purchase createPurchaseToProduct:[self numberFormatter:self.productPriceInput.text] withProduct:product inContext:self.managedObjectContext];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - Fetch Objects
 
-//- (Product *)getProduct
+#pragma mark Navigation
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 //{
-//    NSFetchRequest *fetchRequest = [NSFetchRequest new];
-//    NSEntityDescription *product = [NSEntityDescription entityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
-//    
-//    [fetchRequest setEntity:product];
-//    
-//    NSError *error = nil;
-//    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-//    
-//    NSLog(@"%@", fetchedObjects);
-//    return [fetchedObjects firstObject];
+//    if ([segue.identifier isEqualToString:@"goToProduct"]){
+//        ProductTableViewController *destionationViewController = segue.destinationViewController;
+//        destionationViewController.product = [self getProduct];
+//    }
 //}
+
 
 
 # pragma mark - UITextField Delegate
 
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-//    
-//}
-//
-//-(BOOL)textFieldShouldReturn:(UITextField*)textField;
-//{
-//    if (textField == self.productNameInput) {
-//        [textField resignFirstResponder];
-//    } else if (textField == self.productPriceInput) {
-//        [self.productNameInput becomeFirstResponder];
-//    }
-//    return YES;
-//}
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
+{
+    [self.productNameInput resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - Emplement
 
 - (NSNumber *)numberFormatter:(NSString *)price
 {
@@ -101,6 +74,11 @@
     [numberFormater setNumberStyle:NSNumberFormatterDecimalStyle];
     NSNumber *number = [numberFormater numberFromString:price];
     return number;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self.productNameInput resignFirstResponder];
 }
 
 @end

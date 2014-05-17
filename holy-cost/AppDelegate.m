@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AddProductViewController.h"
+#import "ProductTableViewController.h"
 
 @implementation AppDelegate
 
@@ -18,10 +18,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    AddProductViewController *addProductViewController = tabBarController.viewControllers[0];
-    addProductViewController.managedObjectContext = self.managedObjectContext;
+    UINavigationController *navigationViewController = tabBarController.viewControllers[0];
+    ProductTableViewController *productTableViewController = navigationViewController.viewControllers[0];
+    productTableViewController.managedObjectContext = self.managedObjectContext;
 
-   return YES;
+    return YES;
 }
 
 

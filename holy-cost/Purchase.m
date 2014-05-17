@@ -15,11 +15,18 @@
 @dynamic longitude;
 @dynamic latitude;
 @dynamic created_at;
-@dynamic product;
 
-- (void)createPurchaseToProduct:(Product *)product
++ (void)createPurchaseToProduct:(NSNumber *)price withProduct:(Product *)product inContext:(NSManagedObjectContext *)context;
 {
+    Purchase *purchase = [NSEntityDescription insertNewObjectForEntityForName:@"Purchase" inManagedObjectContext:context];
+    [purchase setValue:price forKey:@"price"];
+    [purchase setValue:[NSDate date] forKey:@"created_at"];
+    [purchase setValue:product forKey:@"product"];
     
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
 }
 
 @end

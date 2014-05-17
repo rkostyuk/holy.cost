@@ -17,11 +17,10 @@
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSDate   * created_at;
-@property (nonatomic, retain) Product  * product;
 @end
 
 @interface Purchase (CoreDataGeneratedAccessors)
 
-- (void)createPurchaseToProduct:(Product *)product;
++ (void)createPurchaseToProduct:(NSNumber *)price withProduct:(Product *)product inContext:(NSManagedObjectContext *)context;
 
 @end

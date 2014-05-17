@@ -12,6 +12,17 @@
 @implementation Product
 
 @dynamic name;
-@dynamic purchases;
+
++ (void)createProductWithName:(NSString *)productName inContext:(NSManagedObjectContext *)context;
+{
+    Product *product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
+    [product setValue:productName forKey:@"name"];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+}
 
 @end

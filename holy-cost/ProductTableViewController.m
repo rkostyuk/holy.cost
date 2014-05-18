@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSFetchedResultsController *searchFetchedResultsController;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *addButtonItem;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
 
@@ -44,7 +45,7 @@
 
 #pragma mark - Fetch Objects
 
-- (NSFetchedResultsController *)fetchedResultsController
+- (NSFetchedResultsController *)newFetchedResultsControllerWithSearch:(NSString *)searchString
 {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
@@ -52,6 +53,7 @@
     
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setPredicate:[self predicateWithSearch:searchString]];
     [fetchRequest setEntity:entity];
     [fetchRequest setIncludesSubentities:NO];
     
@@ -74,13 +76,26 @@
     return _fetchedResultsController;
 }
 
+- (NSPredicate *)predicateWithSearch:(NSString *)searchString
+{
+    NSMutableArray *predicates = [NSMutableArray new];
+    
+    if (searchString.length) {
+        
+        [predicates addObject:[NSPredicate predicateWithFormat:@"name BEGINSWITH[c] %@", searchString]];
+    }
+    
+    return [NSCompoundPredicate andPredicateWithSubpredicates:predicates];
+}
+
+
 
 #pragma mark - Table view data source
 
-//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-//{
-//    return [[self fetchedResultsControllerForTableView:tableView] sectionIndexTitles];
-//}
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return [[self fetchedResultsControllerForTableView:tableView] sectionIndexTitles];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -106,7 +121,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"productCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"productCell"];
+    
     Product *product = [[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath];
     cell.textLabel.text = product.name;
     return cell;
@@ -119,6 +135,26 @@
     } else {
         return self.fetchedResultsController;
     }
+}
+
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    _fetchedResultsController = [self newFetchedResultsControllerWithSearch:nil];
+    return _fetchedResultsController;
+}
+
+- (NSFetchedResultsController *)searchFetchedResultsController
+{
+    if (_searchFetchedResultsController != nil) {
+        return _searchFetchedResultsController;
+    }
+    _searchFetchedResultsController = [self newFetchedResultsControllerWithSearch:self.searchDisplayController.searchBar.text];
+    return _searchFetchedResultsController;
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
@@ -232,6 +268,43 @@
 */
 
 
+#pragma mark - Fix Search Result Table Content Size
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
+{
+    _searchFetchedResultsController.delegate = nil;
+    _searchFetchedResultsController = nil;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    NSFetchRequest *fetchRequest = self.searchFetchedResultsController.fetchRequest;
+    [fetchRequest setPredicate:[self predicateWithSearch:searchString]];
+    
+    NSError *error = nil;
+    if (![self.searchFetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return YES;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    UITableView *tableView = self.searchDisplayController.searchResultsTableView;
+    
+    if (!self.searchDisplayController.isActive) {
+        return;
+    }
+    
+    tableView.contentInset = UIEdgeInsetsZero;
+    
+    [tableView beginUpdates];
+    [tableView endUpdates];
+}
+
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -244,11 +317,9 @@
         }
         
         Product *product = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        ProductViewController *destinationViewController = [ProductViewController new];
+        ProductViewController *destinationViewController = [segue destinationViewController];
         destinationViewController.managedObjectContext = self.managedObjectContext;
         destinationViewController.product = product;
-        NSLog(@"%@", destinationViewController.product);
-        
     }
 }
 

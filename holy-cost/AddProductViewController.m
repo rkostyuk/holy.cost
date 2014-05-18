@@ -17,8 +17,8 @@
 @interface AddProductViewController ()
 
 @property (nonatomic, retain) IBOutlet UITextField *productNameInput;
-//@property (nonatomic, retain) IBOutlet UITextField *productPriceInput;
-@property (nonatomic, retain) IBOutlet UIButton    *addProduct;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem    *addProductButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem    *cancelButton;
 
 @end
 
@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     self.productNameInput.delegate = self;
+    [self.productNameInput becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +38,11 @@
 }
 
 #pragma mark - IBActions
+
+- (IBAction)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)addProduct:(id)sender
 {

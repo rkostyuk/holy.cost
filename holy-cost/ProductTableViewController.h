@@ -11,7 +11,8 @@
 
 
 
-@interface ProductTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface ProductTableViewController : UIViewController <NSFetchedResultsControllerDelegate,
+                                        UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 

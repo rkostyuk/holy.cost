@@ -7,20 +7,20 @@
 //
 
 #import "ProductViewController.h"
+#import "Product.h"
 
 @interface ProductViewController ()
 
 @end
 
 @implementation ProductViewController
-
 @synthesize product;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@", self.product);
-//    self.title = self.product.name;
+    self.title = self.product.name;
 }
 
 - (void)didReceiveMemoryWarning

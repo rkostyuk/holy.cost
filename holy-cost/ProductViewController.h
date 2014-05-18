@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Roman Kostyuk. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 
 @class Product;
 

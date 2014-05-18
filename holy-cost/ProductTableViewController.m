@@ -92,11 +92,6 @@
 
 #pragma mark - Table view data source
 
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    return [[self fetchedResultsControllerForTableView:tableView] sectionIndexTitles];
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [[[self fetchedResultsControllerForTableView:tableView] sections] count];
@@ -106,12 +101,6 @@
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self fetchedResultsControllerForTableView:tableView] sections][section];
     return [sectionInfo numberOfObjects];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[[self fetchedResultsControllerForTableView:tableView] sections] objectAtIndex:section];
-    return [sectionInfo name];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index

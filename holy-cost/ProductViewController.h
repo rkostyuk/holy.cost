@@ -10,7 +10,7 @@
 
 @class Product;
 
-@interface ProductViewController : UIViewController
+@interface ProductViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) Product *product;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
